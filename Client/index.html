@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Expert Academic Essays</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper" class="clearfix">
+
+			<!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li class="active"><!-- dashboard -->
+							<a class="dashboard" href="#"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-file"></i> <span>Create Orders</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>All My Orders</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="inprogress.html">In progress</a></li>
+								<li><a href="finished.html">Finished</a></li>
+								<li><a href="cancelled.html">Cancelled</a></li>
+							</ul>
+						</li>
+						<li class=""><!-- dashboard -->
+							<a class="dashboard" href="transuctions.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-bank"></i> <span>Transactions</span>
+							</a>
+						</li>
+						<li class=""><!-- dashboard -->
+							<a class="dashboard" href="settings.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-cogs"></i> <span>Settings</span>
+							</a>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>Advanced</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="calendar.html">
+								<i class="main-icon fa fa-support"></i>
+								<span>Help Center</span>
+							</a>
+						</li>
+						<li>
+							<a href="../../HTML/start.html">
+								<i class="main-icon fa fa-power-off"></i>
+								<span>Logout</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> 
+								<span class="user-name">
+									<span class="hidden-xs">
+										John Doe <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+				<!-- page title -->
+				<header id="page-header">
+					<h1>Create Order</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">Orders</a></li>
+						<li class="active">Create Order</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+				<div id="content" class="padding-20">
+
+					<div class="row">
+
+						<div class="col-md-6">
+
+							<!-- ------ -->
+							<div class="panel panel-default">
+								<div class="panel-heading panel-heading-transparent">
+									<i class="fa fa-file-word-o"></i><strong> DESCRIBE OF YOUR ORDER REQUIREMETNS</strong>
+								</div>
+
+								<div class="panel-body">
+
+									<form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+										<fieldset>
+											<!-- required [php action request] -->
+											<input type="hidden" name="action" value="contact_send" />
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12 col-sm-12">
+														<label>Paper Topic *</label>
+														<input type="text" name="contact[first_name]" value="" class="form-control required">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12 col-sm-12">
+														<label>Type of Paper *</label>
+														<select name="contact[position]" class="form-control pointer required">
+															<option value="0" selected="selected">Essay</option>
+															<option value="13">Term Paper</option>
+															<option value="14">Research Paper</option>
+															<option value="39">Coursework</option>
+															<option value="37">Book Report</option>
+															<option value="38">Book Review</option>
+															<option value="85">Movie Review</option>
+															<option value="242">Research Summary</option>
+															<option value="1">Dissertation</option>
+															<option value="15">Thesis</option>
+															<option value="172">Thesis/Dissertation Proposal</option>
+															<option value="40">Research Proposal</option>
+															<option value="146">Dissertation Chapter - Abstract</option>
+															<option value="147">Dissertation Chapter - Introduction Chapter</option>
+															<option value="148">Dissertation Chapter - Literature Review</option>
+															<option value="149">Dissertation Chapter - Methodology</option>
+															<option value="150">Dissertation Chapter - Results</option>
+															<option value="151">Dissertation Chapter - Discussion</option>
+															<option value="159">Dissertation Services - Editing</option>
+															<option value="174">Dissertation Services - Proofreading</option>
+															<option value="152">Formatting</option>
+															<option value="142">Admission Services - Admission Essay</option>
+															<option value="143">Admission Services - Scholarship Essay</option>
+															<option value="144">Admission Services - Personal Statement</option>
+															<option value="145">Admission Services - Editing</option>
+															<option value="3">Editing</option>
+															<option value="163">Proofreading</option>
+															<option value="80">Case Study</option>
+															<option value="83">Lab Report</option>
+															<option value="84">Speech/Presentation</option>
+															<option value="234">Math/Physics/Economics/Statistics Problems</option>
+															<option value="168">Article</option>
+															<option value="169">Article Critique</option>
+															<option value="170">Annotated Bibliography</option>
+															<option value="171">Reaction Paper</option>
+															<option value="125">Multiple Choice Questions (Non-time-framed)</option>
+															<option value="126">Multiple Choice Questions (Time-framed)</option>
+															<option value="173">Statistics Project</option>
+															<option value="51">PowerPoint Presentation</option>
+															<option value="182">Programming</option>
+															<option value="262">Online assignment</option>
+															<option value="263">Simulation report</option>
+															<option value="268">Assessment</option>
+															<option value="269">Biography</option>
+															<option value="270">Business Plan</option>
+															<option value="271">Capstone Project</option>
+															<option value="272">Marketing Plan</option>
+															<option value="273">Critical Thinking</option>
+															<option value="274">Short Story</option>
+															<option value="275">SWOT Analysis</option>
+															<option value="276">Assignment</option>
+															<option value="277">Financial Analysis</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-6 col-sm-6">
+														<label>Urgency *</label>
+														<select name="contact[position]" class="form-control pointer required">
+															<option value="14 Days">14 days</option>
+															<option value="7 Days">7 days</option>
+															<option value="5 Days">5 days</option>
+															<option value="4 Days">4 days</option>
+															<option value="3 Days">3 days</option>
+															<option value="48 Hours">48 hours</option>
+															<option value="24 Hours">24 hours</option>
+															<option value="12 Hours">12 hours</option>
+															<option value="6 Hours">6 hours</option>
+															<option value="3 Hours">3 hours</option>
+														</select>
+													</div>
+													<div class="col-md-6 col-sm-6">
+														<label>Number of Pages *</label>
+														<select name="contact[position]" class="form-control pointer required">
+															<option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option><option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option><option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option><option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option><option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option><option value="100">100</option><option value="101">101</option><option value="102">102</option><option value="103">103</option><option value="104">104</option><option value="105">105</option><option value="106">106</option><option value="107">107</option><option value="108">108</option><option value="109">109</option><option value="110">110</option><option value="111">111</option><option value="112">112</option><option value="113">113</option><option value="114">114</option><option value="115">115</option><option value="116">116</option><option value="117">117</option><option value="118">118</option><option value="119">119</option><option value="120">120</option><option value="121">121</option><option value="122">122</option><option value="123">123</option><option value="124">124</option><option value="125">125</option><option value="126">126</option><option value="127">127</option><option value="128">128</option><option value="129">129</option><option value="130">130</option><option value="131">131</option><option value="132">132</option><option value="133">133</option><option value="134">134</option><option value="135">135</option><option value="136">136</option><option value="137">137</option><option value="138">138</option><option value="139">139</option><option value="140">140</option><option value="141">141</option><option value="142">142</option><option value="143">143</option><option value="144">144</option><option value="145">145</option><option value="146">146</option><option value="147">147</option><option value="148">148</option><option value="149">149</option><option value="150">150</option><option value="151">151</option><option value="152">152</option><option value="153">153</option><option value="154">154</option><option value="155">155</option><option value="156">156</option><option value="157">157</option><option value="158">158</option><option value="159">159</option><option value="160">160</option><option value="161">161</option><option value="162">162</option><option value="163">163</option><option value="164">164</option><option value="165">165</option><option value="166">166</option><option value="167">167</option><option value="168">168</option><option value="169">169</option><option value="170">170</option><option value="171">171</option><option value="172">172</option><option value="173">173</option><option value="174">174</option><option value="175">175</option><option value="176">176</option><option value="177">177</option><option value="178">178</option><option value="179">179</option><option value="180">180</option><option value="181">181</option><option value="182">182</option><option value="183">183</option><option value="184">184</option><option value="185">185</option><option value="186">186</option><option value="187">187</option><option value="188">188</option><option value="189">189</option><option value="190">190</option><option value="191">191</option><option value="192">192</option><option value="193">193</option><option value="194">194</option><option value="195">195</option><option value="196">196</option><option value="197">197</option><option value="198">198</option><option value="199">199</option><option value="200">200</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12 col-sm-12">
+														<label>Subject Area *</label>
+														<select name="contact[position]" class="form-control pointer required">
+															<option value="0">select</option>
+															<option value="10">Art</option>
+															<option value="12">Architecture</option>
+															<option value="15">Dance</option>
+															<option value="17">&nbsp;&nbsp;Design Analysis</option>
+															<option value="13">&nbsp;&nbsp;Drama</option><option value="16">&nbsp;&nbsp;Movies</option><option value="18">&nbsp;&nbsp;Music</option><option value="11">&nbsp;&nbsp;Paintings</option><option value="14">&nbsp;&nbsp;Theatre</option><option value="112">Biology</option><option value="52">Business</option><option value="111">Chemistry</option><option value="102">Communications and Media</option><option value="105">&nbsp;&nbsp;Advertising</option><option value="107">&nbsp;&nbsp;Communication Strategies</option><option value="103">&nbsp;&nbsp;Journalism</option><option value="104">&nbsp;&nbsp;Public Relations</option><option value="115">Creative writing</option><option value="53">Economics</option><option value="60">&nbsp;&nbsp;Accounting</option><option value="58">&nbsp;&nbsp;Company Analysis</option><option value="62">&nbsp;&nbsp;E-Commerce</option><option value="59">&nbsp;&nbsp;Finance</option><option value="117">&nbsp;&nbsp;International Affairs/Relations</option><option value="57">&nbsp;&nbsp;Investment</option><option value="63">&nbsp;&nbsp;Logistics</option><option value="64">&nbsp;&nbsp;Trade</option><option value="87">Education</option><option value="93">&nbsp;&nbsp;Application Essay</option><option value="89">&nbsp;&nbsp;Education Theories</option><option value="88">&nbsp;&nbsp;Pedagogy</option><option value="90">&nbsp;&nbsp;Teacher's Career</option><option value="67">Engineering</option><option value="9">English</option><option value="24">Ethics</option><option value="36">History</option><option value="38">&nbsp;&nbsp;African-American Studies</option><option value="37">&nbsp;&nbsp;American History</option><option value="42">&nbsp;&nbsp;Asian Studies</option><option value="41">&nbsp;&nbsp;Canadian Studies</option><option value="44">&nbsp;&nbsp;East European Studies</option><option value="45">&nbsp;&nbsp;Holocaust</option><option value="40">&nbsp;&nbsp;Latin-American Studies</option><option value="39">&nbsp;&nbsp;Native-American Studies</option><option value="43">&nbsp;&nbsp;West European Studies</option><option value="47">Law</option><option value="49">&nbsp;&nbsp;Criminology</option><option value="48">&nbsp;&nbsp;Legal Issues</option><option value="7">Linguistics</option><option value="2">Literature</option><option value="4">&nbsp;&nbsp;American Literature</option><option value="5">&nbsp;&nbsp;Antique Literature</option><option value="6">&nbsp;&nbsp;Asian Literature</option><option value="3">&nbsp;&nbsp;English Literature</option><option value="116">&nbsp;&nbsp;Shakespeare Studies</option><option value="54">Management</option><option value="56">Marketing</option><option value="51">Mathematics</option><option value="94">Medicine and Health</option><option value="99">&nbsp;&nbsp;Alternative Medicine</option><option value="97">&nbsp;&nbsp;Healthcare</option><option value="101">&nbsp;&nbsp;Nursing</option><option value="95">&nbsp;&nbsp;Nutrition</option><option value="100">&nbsp;&nbsp;Pharmacology</option><option value="96">&nbsp;&nbsp;Sport</option><option value="78">Nature</option><option value="85">&nbsp;&nbsp;Agricultural Studies</option><option value="113">&nbsp;&nbsp;Anthropology</option><option value="86">&nbsp;&nbsp;Astronomy</option><option value="83">&nbsp;&nbsp;Environmental Issues</option><option value="79">&nbsp;&nbsp;Geography</option><option value="80">&nbsp;&nbsp;Geology</option><option value="28">Philosophy</option><option value="110">Physics</option><option value="29">Political Science</option><option value="21">Psychology</option><option value="108">Religion and Theology</option><option value="22">Sociology</option><option value="65">Technology</option><option value="71">&nbsp;&nbsp;Aeronautics</option><option value="70">&nbsp;&nbsp;Aviation</option><option value="72">&nbsp;&nbsp;Computer Science</option><option value="73">&nbsp;&nbsp;Internet</option><option value="75">&nbsp;&nbsp;IT Management</option><option value="77">&nbsp;&nbsp;Web Design</option><option value="114">Tourism</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-6 col-sm-6">
+														<label>Deadline *</label>
+														<input type="text" class="form-control datepicker" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
+													</div>
+													<div class="col-md-6 col-sm-6">
+														<label>*</label>
+														<input type="text" class="form-control timepicker" value="12 : 00 : PM">
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-6 col-sm-6">
+														<label>Spacing *</label>
+														<select name="contact[position]" class="form-control pointer required">
+															<option value="">--- Select ---</option>
+															<option value="Double Spaced">Double Spaced</option>
+															<option value="Single Spaced">Single Spaced</option>
+														</select>
+													</div>
+													<div class="col-md-6 col-sm-6">
+														<label>Academic Level *</label>
+														<select name="contact[position]" class="form-control pointer required">
+															<option value="">--- Select ---</option>
+															<option value="High School">High School</option>
+															<option value="Undergraduate">Undergraduate</option>
+															<option value="Master">Masters</option>
+															<option value="PHd">PHd</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-6 col-sm-6">
+														<label>Number of Source *</label>
+														<select name="contact[position]" class="form-control pointer required">
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option>
+														</select>
+													</div>
+													<div class="col-md-6 col-sm-6">
+														<label>Style *</label>
+														<select name="contact[position]" class="form-control pointer required">
+															<option value="">--- Select ---</option>
+															<option value="APA">APA</option>
+															<option value="MLA">MLA</option>
+															<option value="Havard">Havard</option>
+															<option value="Chicago">Chicago</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12 col-sm-12">
+														<label>Extra Instuctions *</label>
+														<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12">
+														<label>
+															File Attachments
+															<small class="text-muted">PLEASE! Paste your dropbox, GDrive, Onedrive link</small>
+														</label>
+														<p></p>
+														<small class="text-muted">File 1</small>
+														<input type="text" name="contact[website]" placeholder="http://" class="form-control">
+														<small class="text-muted">File 2</small>
+														<input type="text" name="contact[website]" placeholder="http://" class="form-control">
+														<small class="text-muted">File 3</small>
+														<input type="text" name="contact[website]" placeholder="http://" class="form-control">
+													</div>
+												</div>
+											</div>
+
+										</fieldset>
+
+										<div class="row">
+											<div class="col-md-12">
+												<button type="submit" class="btn btn-3d btn-info btn-xlg btn-block margin-top-30">
+													PROCEED TO CHECKOUT
+												</button>
+											</div>
+										</div>
+
+									</form>
+
+								</div>
+
+							</div>
+							<!-- /----- -->
+
+						</div>
+
+						<div class="col-md-6">
+
+							<div class="panel panel-default">
+								<div class="panel-body">
+
+									<h4><i class="main-icon fa fa-file"></i> Order Preview</h4>
+									<hr />
+									<form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
+										<fieldset>
+											<!-- required [php action request] -->
+											<input type="hidden" name="action" value="contact_send" />
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12 col-sm-12">
+														<label style="color: forestgreen">Paper Topic *</label>
+														<p>History of Dingoingo</p>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12 col-sm-12">
+														<label style="color: forestgreen">Type of Paper *</label>
+														<p>Research Paper</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-6 col-sm-6">
+														<label style="color: forestgreen">Urgency *</label>
+														<p>Normal</p>
+													</div>
+													<div class="col-md-6 col-sm-6">
+														<label style="color: forestgreen">Number of Pages *</label>
+														<p>42</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12 col-sm-12">
+														<label style="color: forestgreen">Subject Area *</label>
+														<p>Communication Strategies</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12 col-sm-12">
+														<label style="color: forestgreen">Deadline *</label>
+														<p>25/12/2016</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-6 col-sm-6">
+														<label style="color: forestgreen">Spacing *</label>
+														<p>Double</p>
+													</div>
+													<div class="col-md-6 col-sm-6">
+														<label style="color: forestgreen">Academic Level *</label>
+														<p>Undergraduate</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-6 col-sm-6">
+														<label style="color: forestgreen">Number of Source *</label>
+														<p>15</p>
+													</div>
+													<div class="col-md-6 col-sm-6">
+														<label style="color: forestgreen">Style *</label>
+														<p>APA</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="form-group">
+													<div class="col-md-12 col-sm-12">
+														<label style="color: forestgreen">Extra Instuctions *</label>
+														<textarea required maxlength="10000" disabled rows="8" class="form-control" name="contact[message]" id="contact:message"> Lopreme some min c ubneo. npoms. nubck nm, Lopreme some min c ubneo. npoms. nubck nmLopreme some min c ubneo. npoms. nubck nmLopreme some min c ubneo. npoms. nubck nmLopreme some min c ubneo. npoms. nubck nm</textarea>
+													</div>
+												</div>
+											</div>
+
+										</fieldset>
+
+									</form>
+
+								</div>
+							</div>
+
+						</div>
+
+
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+		
+		<!-- PAGE LEVEL SCRIPT -->
+		<script type="text/javascript">
+			/* 
+				Toastr Notification On Load 
+
+				TYPE:
+					primary
+					info
+					error
+					success
+					warning
+
+				POSITION
+					top-right
+					top-left
+					top-center
+					top-full-width
+					bottom-right
+					bottom-left
+					bottom-center
+					bottom-full-width
+					
+				false = click link (example: "http://www.stepofweb.com")
+			*/
+			_toastr("Welcome, you have 2 new orders","top-right","success",false);
+
+
+
+
+			/** SALES CHART
+			******************************************* **/
+			loadScript(plugin_path + "chart.flot/jquery.flot.min.js", function(){
+				loadScript(plugin_path + "chart.flot/jquery.flot.resize.min.js", function(){
+					loadScript(plugin_path + "chart.flot/jquery.flot.time.min.js", function(){
+						loadScript(plugin_path + "chart.flot/jquery.flot.fillbetween.min.js", function(){
+							loadScript(plugin_path + "chart.flot/jquery.flot.orderBars.min.js", function(){
+								loadScript(plugin_path + "chart.flot/jquery.flot.pie.min.js", function(){
+									loadScript(plugin_path + "chart.flot/jquery.flot.tooltip.min.js", function(){
+
+										if (jQuery("#flot-sales").length > 0) {
+
+											/* DEFAULTS FLOT COLORS */
+											var $color_border_color = "#eaeaea",		/* light gray 	*/
+												$color_second 		= "#6595b4";		/* blue      	*/
+
+
+											var d = [
+												[1196463600000, 0], [1196550000000, 0], [1196636400000, 0], [1196722800000, 77], [1196809200000, 3636], [1196895600000, 3575], [1196982000000, 2736], [1197068400000, 1086], [1197154800000, 676], [1197241200000, 1205], [1197327600000, 906], [1197414000000, 710], [1197500400000, 639], [1197586800000, 540], [1197673200000, 435], [1197759600000, 301], [1197846000000, 575], [1197932400000, 481], [1198018800000, 591], [1198105200000, 608], [1198191600000, 459], [1198278000000, 234], [1198364400000, 4568], [1198450800000, 686], [1198537200000, 4122], [1198623600000, 449], [1198710000000, 468], [1198796400000, 392], [1198882800000, 282], [1198969200000, 208], [1199055600000, 229], [1199142000000, 177], [1199228400000, 374], [1199314800000, 436], [1199401200000, 404], [1199487600000, 544], [1199574000000, 500], [1199660400000, 476], [1199746800000, 462], [1199833200000, 500], [1199919600000, 700], [1200006000000, 750], [1200092400000, 600], [1200178800000, 500], [1200265200000, 900], [1200351600000, 930], [1200438000000, 1200], [1200524400000, 980], [1200610800000, 950], [1200697200000, 900], [1200783600000, 1000], [1200870000000, 1050], [1200956400000, 1150], [1201042800000, 1100], [1201129200000, 1200], [1201215600000, 1300], [1201302000000, 1700], [1201388400000, 1450], [1201474800000, 1500], [1201561200000, 1510], [1201647600000, 1510], [1201734000000, 1510], [1201820400000, 1700], [1201906800000, 1800], [1201993200000, 1900], [1202079600000, 2000], [1202166000000, 2100], [1202252400000, 2200], [1202338800000, 2300], [1202425200000, 2400], [1202511600000, 2550], [1202598000000, 2600], [1202684400000, 2500], [1202770800000, 2700], [1202857200000, 2750], [1202943600000, 2800], [1203030000000, 3245], [1203116400000, 3345], [1203202800000, 3000], [1203289200000, 3200], [1203375600000, 3300], [1203462000000, 3400], [1203548400000, 3600], [1203634800000, 3700], [1203721200000, 3800], [1203807600000, 4000], [1203894000000, 4500]];
+										
+											for (var i = 0; i < d.length; ++i) {
+												d[i][0] += 60 * 60 * 1000;
+											}
+										
+											var options = {
+
+												xaxis : {
+													mode : "time",
+													tickLength : 5
+												},
+
+												series : {
+													lines : {
+														show : true,
+														lineWidth : 1,
+														fill : true,
+														fillColor : {
+															colors : [{
+																opacity : 0.1
+															}, {
+																opacity : 0.15
+															}]
+														}
+													},
+												   //points: { show: true },
+													shadowSize : 0
+												},
+
+												selection : {
+													mode : "x"
+												},
+
+												grid : {
+													hoverable : true,
+													clickable : true,
+													tickColor : $color_border_color,
+													borderWidth : 0,
+													borderColor : $color_border_color,
+												},
+
+												tooltip : true,
+
+												tooltipOpts : {
+													content : "Sales: %x <span class='block'>$%y</span>",
+													dateFormat : "%y-%0m-%0d",
+													defaultTheme : false
+												},
+
+												colors : [$color_second],
+										
+											};
+										
+											var plot = jQuery.plot(jQuery("#flot-sales"), [d], options);
+										}
+
+									});
+								});
+							});
+						});
+					});
+				});
+			});
+			</script>
+
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async type="text/javascript" src="assets/plugins/styleswitcher/styleswitcher.js"></script>
+	</body>
+</html>
